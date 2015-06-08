@@ -1,3 +1,94 @@
+2015-06-08  Tom de Vries  <tom@codesourcery.com>
+
+	PR rtl-optimization/66444
+	* postreload.c (reload_combine): Use get_call_reg_set_usage instead of
+	call_used_regs.
+
+2015-06-08  Richard Biener  <rguenther@suse.de>
+
+	PR tree-optimization/66422
+	* tree-ssa-loop-ivcanon.c (remove_exits_and_undefined_stmts): Split
+	block after inserted gcc_unreachable.
+
+2015-06-08  Nick Clifton  <nickc@redhat.com>
+
+	* config/rx/rx.c (rx_function_value): Do not promote vector types.
+	(rx_promote_function_mode): Likewise.
+	* config/rx/rx.h (LIBCALL_VALUE): Likewise.
+
+2015-06-08  Jakub Jelinek  <jakub@redhat.com>
+
+	* genattrtab.c (insn_alternatives): Change type from int *
+	to uint64_t *.
+	(check_attr_test): Shift ((uint64_t) 1) instead of 1 up.
+	(get_attr_value): Change type of num_alt to uint64_t.
+	(compute_alternative_mask): Change return type from
+	int to uint64_t, shift ((uint64_t) 1) instead of 1 up.
+	(make_alternative_compare, mk_attr_alt): Change argument type
+	from int to uint64_t.
+	(simplify_test_exp): Change type of i from int to uint64_t.
+	Shift ((uint64_t) 1) instead of 1 up.
+	(main): Adjust oballocvec first argument from int to uint64_t.
+	Shift ((uint64_t) 1) instead of 1 up.
+
+2015-06-08  Jan Kratochvil  <jan.kratochvil@redhat.com>
+
+	PR other/65366
+	* gdbhooks.py: Import sys.
+	(intptr): New function.  Replace int(...) by intptr(...).
+
+2015-06-08  Richard Biener  <rguenther@suse.de>
+
+	* tree-vect-stmts.c (vectorizable_load): Compute the pointer
+	adjustment for gaps at the end of a SLP load group properly.
+	* tree-vect-slp.c (vect_supported_load_permutation_p): Allow
+	all permutations we can generate.
+	(vect_transform_slp_perm_load): Use the correct group-size.
+
+2015-06-08  Marc Glisse  <marc.glisse@inria.fr>
+
+	* genmatch.c (expr::gen_transform): For conditions, guess the type
+	from the second operand.
+
+2015-06-08  Tom de Vries  <tom@codesourcery.com>
+
+	PR tree-optimization/66442
+	* gimple-iterator.h (gimple_seq_nondebug_singleton_p): Add function.
+	* tree-parloops.c (try_transform_to_exit_first_loop_alt): Return false
+	if the loop latch is not a singleton.  Use
+	gimple_seq_nondebug_singleton_p instead of gimple_seq_singleton_p.
+
+2015-06-08  Marek Polacek  <polacek@redhat.com>
+
+	PR sanitizer/66452
+	* toplev.c (check_global_declaration): Don't warn about artificial
+	decls.
+
+2015-06-08  Tom de Vries  <tom@codesourcery.com>
+
+	PR tree-optimization/66436
+	* cgraphunit.c (cgraph_node::analyze): Don't dump function to gimple
+	dump file.
+	* gimplify.c: Add tree-dump.h include.
+	(gimplify_function_tree): Dump function to gimple dump file.
+	* stor-layout.c (finalize_size_functions): Don't dump function to gimple
+	dump file.
+
+2015-06-08  Tom de Vries  <tom@codesourcery.com>
+
+	PR tree-optimization/66435
+	* cgraphunit.c (cgraph_node::add_new_function): Dump message on new
+	function.
+
+2015-06-06  Jan Hubicka  <hubicka@ucw.cz>
+
+	* alias.c (get_alias_set): Be ready for TYPE_CANONICAL
+	of ptr_type_node to not be ptr_to_node.
+	* tree.c (gimple_types_compatible_p): Do not match TREE_CODE of
+	TREE_TYPE of pointers.
+	* gimple-expr.c (useless_type_conversion): Reorder the check for
+	function pointers and TYPE_CANONICAL.
+
 2015-06-06  John David Anglin  <danglin@gcc.gnu.org>
 
 	PR bootstrap/66319
