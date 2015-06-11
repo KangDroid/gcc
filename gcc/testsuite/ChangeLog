@@ -1,10 +1,38 @@
+2015-06-11  Paul Thomas  <pault@gcc.gnu.org>
+
+	PR fortran/66079
+	* gfortran.dg/allocatable_scalar_13.f90: New test
+
+2015-06-11  Marek Polacek  <polacek@redhat.com>
+
+	* gcc.dg/fold-xor-3.c: New test.
+
+2015-06-11  Kyrylo Tkachov  <kyrylo.tkachov@arm.com>
+
+	* gcc.target/arm/short-it-ifcvt-1.c: New test.
+	* gcc.target/arm/short-it-ifcvt-2.c: Likewise.
+
+2015-06-11  Christian Bruel  <christian.bruel@st.com>
+
+	PR target/52144
+	* gcc.target/arm/pragma_attribute.c: New test.
+
+2015-06-10  Uros Bizjak  <ubizjak@gmail.com>
+
+	* g++.dg/abi/mangle-regparm.C (dg-optiond): Add -save-temps.
+
+2015-06-10  Uros Bizjak  <ubizjak@gmail.com>
+
+	PR target/66473
+	* gcc.target/i386/pr66473.c: New test.
+
 2015-06-10  Jakub Jelinek  <jakub@redhat.com>
 
 	PR target/66470
 	* gcc.dg/tls/pr66470.c: New test.
 	* gcc.target/i386/pr66470.c: New test.
 
-2015-06-09  Christian Bruel  <christian.bruel@st.com>
+2015-06-10  Christian Bruel  <christian.bruel@st.com>
 
 	PR target/52144
 	* gcc.target/arm/attr_arm.c: New test
@@ -643,7 +671,7 @@
 2015-05-27  Honggyu Kim  <hong.gyu.kim@lge.com>
 
 	PR target/65358
-	* gcc.dg/pr65358.c: New test. 
+	* gcc.dg/pr65358.c: New test.
 
 2015-05-27  Andre Vehreschild  <vehre@gmx.de>
 

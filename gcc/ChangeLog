@@ -1,3 +1,75 @@
+2015-06-11  Eric Botcazou  <ebotcazou@adacore.com>
+
+	PR bootstrap/66252
+	* config/sparc/sparc.c (hard_regno_mode_classes): Add ??? comment.
+	* config/sparc/sparc.md (zero_extendsidi2_insn_sp32): Use single order.
+	(*addx_extend_sp32): Fix pasto.
+	(*subx_extend): Rename into...
+	(*subx_extend_sp32): ...this.
+	(*adddi3_extend_sp32): Add earlyclobber.
+	(*subdi3_insn_sp32): Likewise.
+	(*subdi3_extend_sp32): Likewise.
+	(*and_not_di_sp32): Likewise.
+	(*or_not_di_sp32): Likewise.
+	(*xor_not_di_sp32): Likewise.
+	(*negdi2_sp32): Likewise.
+	(*one_cmpldi2_sp32): Likewise.
+
+2015-06-11  Pierre-Marie de Rodat  <derodat@adacore.com>
+
+	* debug.h (struct gcc_debug_hooks): Add a
+	register_main_translation_unit hook.
+	* debug.c (do_nothing_debug_hooks): Provide a function for this
+	new hook.
+	* dbxout.c (dbx_debug_hooks): Likewise.
+	* sdbout.c (sdb_debug_hooks): Likewise.
+	* vmsdbgout.c (vmsdbg_debug_hooks): Likewise.
+	* dwarf2out.c (main_translation_unit): New global variable.
+	(dwarf2out_register_main_translation_unit): New function
+	implementing the new hook.
+	(dwarf2_debug_hooks): Assign
+	dwarf2out_register_main_translation_unit to this new hook.
+	(dwarf2out_init): Associate any main translation unit to
+	comp_unit_die ().
+
+2015-06-11  Marek Polacek  <polacek@redhat.com>
+
+	* match.pd ((x & y) ^ (x | y) -> x ^ y): New pattern.
+
+2015-06-11  Marek Polacek  <polacek@redhat.com>
+
+	* match.pd: Use single_use throughout.
+
+2015-06-11  Kyrylo Tkachov  <kyrylo.tkachov@arm.com>
+
+	* config/arm/arm.c (arm_option_params_internal): When optimising
+	for speed set max_insns_skipped when arm_restrict_it.
+
+2015-06-11  Christian Bruel  <christian.bruel@st.com>
+
+	PR target/52144
+	* config/arm/arm-c.c (arm_cpu_cpp_builtins): Conditionally define
+	 macros in ...
+	(arm_cpu_builtins): New function.
+	(arm_pragma_target_parse): Call arm_cpu_builtins.
+	* config/arm/arm-protos.h (arm_cpu_builtins): Declare.
+	(arm_register_target_pragmas): Likewise.
+	* config/arm/arm.h (REGISTER_TARGET_PRAGMAS):
+	 Call arm_register_target_pragmas.
+	* config/arm/arm-c.c (arm_register_target_pragmas): New function.
+	(arm_pragma_target_parse): Likewise.
+
+2015-06-10  Kaz Kojima  <kkojima@gcc.gnu.org>
+
+	* config/sh/sh.md (tstsi_t): Add '?' modifier to 'r' alternative
+	of the second operand.
+
+2015-06-10  Uros Bizjak  <ubizjak@gmail.com>
+
+	PR target/66473
+	* config/i386/i386.c (ix86_expand_vector_set): Use gen_int_mode
+	to prepare mask operand for AVX512 modes.
+
 2015-06-10  Michael Meissner  <meissner@linux.vnet.ibm.com>
 
 	PR target/66474
