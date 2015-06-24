@@ -1,3 +1,44 @@
+2015-06-24  Jason Merrill  <jason@redhat.com>
+
+	PR c++/66501
+	* init.c (vec_copy_assign_is_trivial): New.
+	(build_vec_init): Use it.
+
+2015-06-24  Mikhail Maltsev  <maltsevm@gmail.com>
+
+	Backport from mainline:
+	2015-06-20  Mikhail Maltsev  <maltsevm@gmail.com>
+
+	PR c++/65882
+	* call.c (build_new_op_1): Check tf_warning flag in all cases.
+
+2015-06-23  Jason Merrill  <jason@redhat.com>
+
+	PR c++/65879
+	* tree.c (no_linkage_check): Skip the 'this' pointer.
+
+2015-06-19  Jason Merrill  <jason@redhat.com>
+
+	PR c++/66515
+	* call.c (implicit_conversion): Call reshape_init here, early.
+	(build_aggr_conv): Not here.
+
+	PR c++/66585
+	* pt.c (instantiate_class_template_1): Clear
+	cp_unevaluated_operand and c_inhibit_evaluation_warnings.
+
+	PR c++/65880
+	* decl.c (build_ptrmemfunc_type): Check TYPE_GET_PTRMEMFUNC_TYPE after
+	cv-qualifiers.
+
+	PR c++/65973
+	* constexpr.c (build_constexpr_constructor_member_initializers):
+	Handle an empty STATEMENT_LIST.
+
+	PR c++/65843
+	* pt.c (tsubst_copy_and_build): Register a capture proxy in
+	local_specializations.
+
 2015-06-17  Jason Merrill  <jason@redhat.com>
 
 	PR c++/66001
