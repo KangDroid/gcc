@@ -1,3 +1,11 @@
+2015-06-26  Jason Merrill  <jason@redhat.com>
+
+	PR c++/66216
+	* class.c (finish_struct): Call fixup_attribute_variants.
+
+	PR c++/66067
+	* mangle.c (write_template_args): Handle 0 length TREE_VEC.
+
 2015-06-24  Jason Merrill  <jason@redhat.com>
 
 	PR c++/65919
