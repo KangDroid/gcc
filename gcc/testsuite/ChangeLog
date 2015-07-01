@@ -1,3 +1,66 @@
+2015-07-01  David Malcolm  <dmalcolm@redhat.com>
+
+	Backport from mainline r225248
+	2015-07-01  David Malcolm  <dmalcolm@redhat.com>
+
+	PR jit/66700
+	* jit.dg/all-non-failing-tests.h: Add
+	test-pr66700-observing-write-through-ptr.c.
+	* jit.dg/test-pr66700-observing-write-through-ptr.c: New testcase.
+
+2015-07-01  David Malcolm  <dmalcolm@redhat.com>
+
+	Backport from mainline r225246
+	2015-07-01  David Malcolm  <dmalcolm@redhat.com>
+
+	* jit.dg/test-accessing-union.c: Add comments for use by
+	gcc/jit/docs/topics/types.rst.
+
+2015-07-01  David Malcolm  <dmalcolm@redhat.com>
+
+	Backport from mainline r225207
+	2015-06-30  David Malcolm  <dmalcolm@redhat.com>
+
+	* jit.dg/all-non-failing-tests.h: Add test-switch.c.
+	* jit.dg/test-error-gcc_jit_block_end_with_switch-NULL-case.c: New
+	testcase.
+	* jit.dg/test-error-gcc_jit_block_end_with_switch-mismatching-case-type.c:
+	New testcase.
+	* jit.dg/test-error-gcc_jit_block_end_with_switch-overlapping-ranges.c:
+	New testcase.
+	* jit.dg/test-error-gcc_jit_context_new_case-non-const-label.c:
+	New testcase.
+	* jit.dg/test-error-gcc_jit_context_new_case-non-integer-type.c:
+	New testcase.
+	* jit.dg/test-error-gcc_jit_context_new_case-reversed-endpoints.c:
+	New testcase.
+	* jit.dg/test-switch.c: New testcase.
+	* jit.dg/test-switch.cc: New testcase.
+
+2015-07-01  David Malcolm  <dmalcolm@redhat.com>
+
+	Backport from mainline r225206
+	2015-06-30  David Malcolm  <dmalcolm@redhat.com>
+
+	PR jit/66546
+	* jit.dg/all-non-failing-tests.h: Add note about
+	test-validly-unreachable-block.c.
+	* jit.dg/test-validly-unreachable-block.c: New file.
+
+2015-07-01  David Malcolm  <dmalcolm@redhat.com>
+
+	Backport from mainline r225205
+	2015-06-30  David Malcolm  <dmalcolm@redhat.com>
+
+	PR jit/66628
+	* jit.dg/all-non-failing-tests.h: Add note about
+	test-extra-options.c.
+	* jit.dg/test-extra-options.c: New testcase.
+
+2015-07-01  Eric Botcazou  <ebotcazou@adacore.com>
+
+	* gfortran.dg/gomp/pr66633.f90: New test.
+
 2015-06-29  David Malcolm  <dmalcolm@redhat.com>
 
 	Backport from mainline r224565
