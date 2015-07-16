@@ -1,3 +1,19 @@
+2015-07-16  Martin Liska  <mliska@suse.cz>
+
+	* g++.dg/ipa/pr66896.c: New test.
+
+2015-07-16  Marek Polacek  <polacek@redhat.com>
+
+	Backported from mainline
+	2015-07-08  Marek Polacek  <polacek@redhat.com>
+
+	PR c++/66748
+	* g++.dg/abi/abi-tag15.C: New test.
+
+2015-07-16  Release Manager
+
+	* GCC 5.2.0 released.
+
 2015-07-15  Renlin Li  <renlin.li@arm.com>
 
 	Backport from mainline.
